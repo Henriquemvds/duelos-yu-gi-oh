@@ -1,0 +1,164 @@
+.game-container {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 60px;
+  margin: 20px auto;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+.card:active {
+  position: relative;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.space-card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  border: solid;
+  border-color: #666;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-down {
+  transform: rotateX(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.person {
+  width: 380px;
+  height: 430px;
+  perspective: 1000px;
+  transition: transform 2s ease-in-out;
+}
+
+.person:hover{
+  position: relative;
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+.field {
+  width: 90vw;
+  height: 140vh;
+  border: 5px solid #ffd700;
+  /* Borda dourada como as cartas */
+  border-radius: 20px;
+  background-color: #333;
+  /* Fundo escuro para contraste */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.zone {
+  background-color: #444;
+  border: 3px solid #666;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  margin: 10px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#player-monsters,
+#opponent-monsters {
+  background: linear-gradient(to bottom, #000, #333);
+  /* Gradiente escuro */
+}
+
+#player-spells-traps,
+#opponent-spells-traps {
+  background: linear-gradient(to bottom, #222, #444);
+  /* Gradiente mais claro */
+}
+
+.align-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.folder {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  max-width: 90%;
+  padding: 20px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilo do header do folder */
+.folder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+  margin-left: 90%;
+}
+
+/* Estilo da descrição */
+.folder-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}

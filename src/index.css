@@ -1,0 +1,48 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./assets/images/0cc26cdc0f4c378fb83a25777a06f254.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* Espaçamento entre letras */
+  text-transform: uppercase;
+  width: 50%;
+  height: 100%;
+  color: #FFD700;
+  text-shadow: 1px 1px 0 #000,
+    /* Sombra preta para dar profundidade */
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  cursor: pointer;
+  border-color: #FF0000;
+  padding: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.yugioh-text {
+  color: #FFD700;
+  /* Cor dourada, típica de elementos de Yu-Gi-Oh! */
+  text-shadow: 3px 3px 0 #000,
+    /* Sombra preta para dar profundidade */
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  padding: 5px;
+  /* Espaço interno */
+  letter-spacing: 2px;
+  /* Espaçamento entre letras */
+  text-transform: uppercase;
+  /* Texto em maiúsculas */
+}
